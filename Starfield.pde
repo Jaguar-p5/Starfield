@@ -93,7 +93,7 @@ void draw(){
   
   observer.myZ -= 2;
   sky[pointer] = new Particle((float)Math.random()*250 + 125, (float)Math.random()*250 + 125, -255 + observer.myZ);
-  if(Math.random() > 0.995)
+  if(Math.random() > 0.998)
     sky[pointer]= new OddBall((float)Math.random()*250 + 125, (float)Math.random()*250 + 125, -255 + observer.myZ);
   pointer --;
   for(int i = pointer + 1; i < 100000; i++)
