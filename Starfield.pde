@@ -1,7 +1,7 @@
 ArrayList <Particle> set = new ArrayList <Particle>();
 Camera observer;
-Particle[] sky = new Particle[100000];
-int pointer = 99899; // where next particle will be placed
+Particle[] sky = new Particle[1000000];
+int pointer = 999899; // where next particle will be placed
 
 void setup(){
   
@@ -9,7 +9,7 @@ void setup(){
   observer = new Camera();
   strokeWeight(0);
   fill(255);
-  for(int i = pointer; i < 100000; i++){
+  for(int i = pointer; i < 1000000; i++){
     sky[i] = new Particle(240, 250);
     
     
@@ -96,7 +96,7 @@ void draw(){
   if(Math.random() > 0.998)
     sky[pointer]= new OddBall((float)Math.random()*250 + 125, (float)Math.random()*250 + 125, -255 + observer.myZ);
   pointer --;
-  for(int i = pointer + 1; i < 100000; i++)
+  for(int i = pointer + 1; i < 1000000; i++)
     sky[i].show(observer);
 
 
